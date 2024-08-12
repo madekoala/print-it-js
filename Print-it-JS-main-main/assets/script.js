@@ -23,3 +23,51 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+
+//comptage des slides
+
+ const totalslide = slides.length
+
+ //eventlister sur fleches
+
+ leftarrow.addEventListener("click",(e)=>{
+	changeslide(-1)
+ })
+
+ righArrow.addEventListener("click",(e)=>{
+	changeslide(1)
+ })
+ 
+ //bullet
+
+ for (let index = 0; index < totalslide; index++){
+	const bulletPoint =document.createElement("div")
+	/*apres avoir creer un element on le rattache a la div*/
+	bulletpointcontainer.appendChild(bulletPoint)
+	//inserer la class dot a chaque div crée
+	bulletPoint.classList.add("dot")
+	//premier bullet soit actif au chargement de la page
+	if (index===0){
+		bulletPoint.classList.add("dot_selected")
+	}
+ } 
+
+ let slideEncours = 0
+
+ //fonction du slider
+
+function changeSlide(sens){
+	slideEncours = sens + slideEncours
+
+	if (slideEncours < 0){
+		slideEncours = totalslide -1
+	}
+
+	if (slideEncours >= totalslide){
+		slideEncours = 0
+	}
+
+	slides(slideEncours)
+	changetexte(slideEncours)
+	bulletpointactif(slideEncours)
+}
