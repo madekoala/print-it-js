@@ -122,13 +122,16 @@ header {
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 /* Gestion des fleches du carrousel */
 #banner .arrow {
+	cursor: pointer;
 	position: absolute;
 }
 #banner .arrow_left {
-	left: 10px;
+	position: relative;
+	left: -340px;
 }
 #banner .arrow_right {
-	right: 10px;
+	position: relative;
+	right: -340px;
 }
 /* Gestion des points du carrousel */
 .dots {
