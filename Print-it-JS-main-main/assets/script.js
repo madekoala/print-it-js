@@ -31,11 +31,11 @@ const slides = [
  //eventlister sur fleches
 
  leftarrow.addEventListener("click",(e)=>{
-	changeslide(-1)
+	changeSlide(-1)
  })
 
  righArrow.addEventListener("click",(e)=>{
-	changeslide(1)
+	changeSlide(1)
  })
  
  //bullet
@@ -70,4 +70,22 @@ function changeSlide(sens){
 	slides(slideEncours)
 	changetexte(slideEncours)
 	bulletpointactif(slideEncours)
+}
+
+function slide(slideEncours){
+	let slide =document.querySelector(".banner-img")
+	slide.src="./assets/images/slideshow/"+ slides[slideEncours].image
+}
+
+function changetexte(slideEncours){
+	let textSlide=document.querySelector("p")
+	textSlide.innerHTML = slides[slideEncours].tagLine
+}
+
+function bulletpointactif(slideEncours){
+	let activebulletpoint =bulletpointcontainer.children[slideEncours]
+	let inactifbulletPoint = document.querySelector("dot_selected")
+
+	activebulletpoint.classList.add("dot_selected")
+	inactifbulletPoint.classList.add("dot_selected")
 }
