@@ -61,14 +61,16 @@ function changeSlide(direction) {
         currentSlide = totalSlides - 1;
     }
 
-    if (currentSlide >= totalSlides) {
+    if (currentSlide === totalSlides) {
         currentSlide = 0;
     }
+
 //appelle des fonctions qui gère le changement de src , tagline et de bullet point
     updateSlide(currentSlide);
     updateText(currentSlide);
     updateActiveBulletPoint(currentSlide);
 }
+
 //fait varier le src du slide
 function updateSlide(slideIndex) {
     const slideElement = document.querySelector(".banner-img");

@@ -119,26 +119,33 @@ header {
 	object-fit: cover;
 	object-position: center;
 }
+
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 /* Gestion des fleches du carrousel */
 #banner .arrow {
 	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
 	position: absolute;
+	width: 100%;
 }
+
 #banner .arrow_left {
 	position: relative;
-	left: -340px;
+	left: 20px;
 }
 #banner .arrow_right {
 	position: relative;
-	right: -340px;
+	right: 20px;
 }
+
 /* Gestion des points du carrousel */
 .dots {
 	position: absolute;
 	bottom: 40px;
 	display: flex;
 }
+
 .dot {
 	margin-inline: 5px;
 	width: 13px;
