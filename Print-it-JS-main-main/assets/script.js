@@ -89,5 +89,3 @@ function updateActiveBulletPoint(slideIndex) {
     }
     bulletPointContainer.children[slideIndex].classList.add("dot_selected");
 }
-
-console.log("Mon fichier est chargé");
