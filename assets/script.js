@@ -39,19 +39,19 @@ rightArrow.addEventListener("click", () => {
     changeSlide(1);
 });
 
-// Création des bullet points
+// bullet points
 for (let index = 0; index < totalSlides; index++) {
     const bulletPoint = document.createElement("div");
     bulletPointContainer.appendChild(bulletPoint);
     bulletPoint.classList.add("dot");
 
-    // Le premier bullet est actif au chargement de la page
+    // actif au chargement de la page
     if (index === 0) {
         bulletPoint.classList.add("dot_selected");
     }
 }
 
-let currentSlide = 0; // Variable pour garder la trace du slide actuel
+let currentSlide = 0; 
 
 // Fonction pour changer de slide
 function changeSlide(direction) {
@@ -65,7 +65,6 @@ function changeSlide(direction) {
         currentSlide = 0;
     }
 
-//appelle des fonctions qui gère le changement de src , tagline et de bullet point
     updateSlide(currentSlide);
     updateText(currentSlide);
     updateActiveBulletPoint(currentSlide);
